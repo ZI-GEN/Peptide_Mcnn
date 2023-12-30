@@ -44,7 +44,7 @@ class ConvNet(torch.nn.Module):
         return d3_Yhat, d8_Yhat, diso_Yhat
     
 def load_sec_struct_model():
-    checkpoint_dir = "../protT5/sec_struct_checkpoint/secstruct_checkpoint.pt"
+    checkpoint_dir = "../database/protT5/sec_struct_checkpoint/secstruct_checkpoint.pt"
     state = torch.load(checkpoint_dir)
     model = ConvNet()
     model.load_state_dict(state['state_dict'])
